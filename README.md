@@ -50,7 +50,7 @@ The profile page allows users to manage their personal information and social co
 ## Running the Client-Side Application
 
 ### Prerequisites:
-The application requires the [Bloom Filter Server](https://github.com/edenbdv/BloomFilter.git) for backend communication. Follow the instructions in the linked repository to set it up.
+The application requires the [Bloom Filter Server]([https://github.com/edenbdv/BloomFilter.git](https://github.com/aviyamegiddoshaked/Bloom-Filter.git)) for backend communication. Follow the instructions in the linked repository to set it up.
 
 
 
