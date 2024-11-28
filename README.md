@@ -52,80 +52,79 @@ The profile page allows users to manage their personal information and social co
 ### Prerequisites:
 The application requires the [Bloom Filter Server](https://github.com/aviyamegiddoshaked/Bloom-Filter.git) for backend communication. Follow the instructions in the linked repository to set it up.
 
-# Running the Client with Docker
+### Running the Client with Docker
 
 To run the client application using Docker, follow the steps below:
 
-### 1. Build the Docker Image
+1. **Build the Docker Image**
 
 First, navigate to the directory containing the `Dockerfile`. Then, run the following command to build the Docker image:
 
 ```bash
-docker build -t facebook-clone-client .
+docker build -t facebook-clone-client.
+```
+
 This will create a Docker image named facebook-clone-client based on the instructions in the Dockerfile.
 
-### 2. Run the Docker Container
-After building the Docker image, you can run the container using the following command:
+ 2.  **Run the Docker Container**
+-After building the Docker image, you can run the container using the following command:
+
+```bash
 docker run -p 3000:3000 --env-file .env facebook-clone-client
+```
+- Once the Docker container is running, open your browser and navigate to http://localhost:3000. You should be able to see and interact with the client application.
 
-Once the Docker container is running, open your browser and navigate to http://localhost:3000. You should be able to see and interact with the client application
-
-# Running the Client without Docker
+### Running the Client without Docker
 
 ## Dependencies
 
-**Frontend:**
-- React.js
-- React Router
-- Bootstrap
+- **Frontend:**
+  - React.js
+  - React Router
+  - Bootstrap
+ 
 
-## Clone the Repositories
+1. Clone the repository:
 
-Clone the client and server repositories:
-
-```bash
-git clone https://github.com/aviyamegiddoshaked/Facebook-web-client.git
-git clone *** server ***
-
-## Install Dependencies
-
-Install the dependencies for both the client and server:
-
-### Client
-```bash
-cd Facebook-web-client
-npm install
+   ```bash
+   git clone client https://github.com/aviyamegiddoshaked/Facebook-web-client.git 
+   git clone server 
+   ```
 
 
-### Server
-
-To install the dependencies for the server, run:
-
-```bash
-cd ../Facebook_clone-Server
-npm install
-
-## Build the Client-Side Code
-
-To build the client-side code, run:
-
-```bash
-npm run build
-
-## Set Up Configuration
-
-In the `config` folder of both the client and server, modify the `config.js` file to include the appropriate IP address and port. 
-
-Additionally, update the `App.js` file in the client to ensure it points to the correct server configuration.
+2. Install dependencies for both client and server:
 
 
+   ```bash
+   cd Facebook_web-client
+   npm install
+   cd ../Facebook_clone-Server
+   npm install
+   ```
 
+3. Build the client-side code:
 
-
-
-
-
-
-
-
+   ```bash
+   npm run build
+   ```
    
+4. Copy the `build/static` folder from the client into the server directory
+
+5. Set up configuration:
+
+   - In the `config` folder of both client and server, modify the `config.js` file to include the appropriate IP address and port (also in App.js) for your server.
+
+## Usage
+
+1. Run in the server:
+
+   ```bash
+   node app.js
+   ```
+2. Run in the client:
+      ```bash
+   npm start
+   ```
+This will open "Foobar" in your browser at `http://ip:port`.
+
+
