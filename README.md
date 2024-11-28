@@ -52,6 +52,78 @@ The profile page allows users to manage their personal information and social co
 ### Prerequisites:
 The application requires the [Bloom Filter Server](https://github.com/aviyamegiddoshaked/Bloom-Filter.git) for backend communication. Follow the instructions in the linked repository to set it up.
 
+# Running the Client with Docker
+
+To run the client application using Docker, follow the steps below:
+
+### 1. Build the Docker Image
+
+First, navigate to the directory containing the `Dockerfile`. Then, run the following command to build the Docker image:
+
+```bash
+docker build -t facebook-clone-client .
+This will create a Docker image named facebook-clone-client based on the instructions in the Dockerfile.
+
+### 2. Run the Docker Container
+After building the Docker image, you can run the container using the following command:
+docker run -p 3000:3000 --env-file .env facebook-clone-client
+
+Once the Docker container is running, open your browser and navigate to http://localhost:3000. You should be able to see and interact with the client application
+
+# Running the Client without Docker
+
+## Dependencies
+
+**Frontend:**
+- React.js
+- React Router
+- Bootstrap
+
+## Clone the Repositories
+
+Clone the client and server repositories:
+
+```bash
+git clone https://github.com/aviyamegiddoshaked/Facebook-web-client.git
+git clone *** server ***
+
+## Install Dependencies
+
+Install the dependencies for both the client and server:
+
+### Client
+```bash
+cd Facebook-web-client
+npm install
+
+
+### Server
+
+To install the dependencies for the server, run:
+
+```bash
+cd ../Facebook_clone-Server
+npm install
+
+## Build the Client-Side Code
+
+To build the client-side code, run:
+
+```bash
+npm run build
+
+## Set Up Configuration
+
+In the `config` folder of both the client and server, modify the `config.js` file to include the appropriate IP address and port. 
+
+Additionally, update the `App.js` file in the client to ensure it points to the correct server configuration.
+
+
+
+
+
+
+
 
 
 
